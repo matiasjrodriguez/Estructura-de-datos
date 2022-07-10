@@ -30,3 +30,7 @@ class Lista:
   def EsVacia(self) -> bool: 
     '''Control de lista vacia'''
     return self._inicio == NULO
+
+  def EsLlena(self) -> bool: 
+    '''Control de lista llena'''
+    return self._libre == NULO
