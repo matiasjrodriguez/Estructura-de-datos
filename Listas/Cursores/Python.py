@@ -12,7 +12,7 @@ class Nodo:
     self.proximo = None
 
 class Lista:
-  def __init__(self, TipoClave, alSize): # Lista.Crear() 
+  def __init__(self, TipoClave:TipoDatosClave, alSize:int): # Lista.Crear() 
     '''Crea una lista vacía''' 
     if alSize >= MIN and alSize <= MAX:
       self._cursor = [''] * (alSize + 1) # La posicion 0 no la usamos pero hay que tenerla en cuenta | Reemplaza SetLength
