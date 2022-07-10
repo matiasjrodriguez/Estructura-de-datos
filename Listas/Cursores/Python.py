@@ -26,3 +26,7 @@ class Lista:
       self._Q_Items = 0
       self._TDatoDeLaClave = TipoClave
       self._Size = alSize
+
+  def EsVacia(self) -> bool: 
+    '''Control de lista vacia'''
+    return self._inicio == NULO
