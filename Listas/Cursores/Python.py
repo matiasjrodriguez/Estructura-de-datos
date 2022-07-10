@@ -1,3 +1,5 @@
+from Tipos.python_tipos import TipoDatosClave
+
 MIN = 1
 MAX = 2000
 NULO = 0
