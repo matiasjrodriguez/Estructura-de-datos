@@ -47,3 +47,29 @@ class Lista:
       Q = self._cursor[P].proximo
 
     return Q
+
+  def Agregar(self, x:TipoElemento) -> Resultado: 
+    '''Agrega un Item al Final de Lista'''
+    result = Resultado.CError
+
+    if x.TipoDatoClave(x.clave) != self._TDatoDeLaClave:
+      result = Resultado.ClaveIncompatible
+    elif not(self.EsLlena()):
+      Q = self._libre
+      self._libre = self._cursor[Q].proximo
+      self._cursor[Q].dato = x
+      self._cursor[Q].proximo = NULO
+      self._cursor[Q].anterior = self._final
+
+      if self.EsVacia():
+        self._inicio = Q  
+      else:
+        self._cursor[self._final].proximo = Q
+      
+      self._final = Q
+      self._Q_Items += 1
+      result = Resultado.OK
+    else:
+      result = Resultado.Llena
+
+    return result
