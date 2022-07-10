@@ -34,3 +34,12 @@ class Lista:
   def EsLlena(self) -> bool: 
     '''Control de lista llena'''
     return self._libre == NULO
+
+  def Siguiente(self, P:PosicionLista) -> PosicionLista:
+    '''Proximo de P o NULO'''
+    if self.EsVacia() or P == NULO:
+      Q = NULO
+    else:
+      Q = self._cursor[P].proximo
+      
+    return Q
