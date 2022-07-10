@@ -23,3 +23,14 @@ class TipoElemento():
     self.clave = clave
     self.Valor1 = Valor1
     self.Valor2 = Valor2
+
+  def TipoDatoClave(clave):
+    '''Evalua el valor de la clave y retorna el Tipo de Dato'''
+    if isinstance(clave, (int, float, complex)):
+      result = TipoDatosClave.NUMERO
+    elif isinstance(clave, str):
+      result = TipoDatosClave.CADENA
+    else:
+      result = TipoDatosClave.OTROS
+
+    return result
